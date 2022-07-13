@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:fake_api/models/cart.dart';
-import 'package:fake_api/models/cart_product.dart';
 import 'package:fake_api/models/product.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;

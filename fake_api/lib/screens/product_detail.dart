@@ -1,4 +1,3 @@
-import 'package:fake_api/models/cart_product.dart';
 import 'package:fake_api/service_locators.dart';
 import 'package:flutter/material.dart';
 

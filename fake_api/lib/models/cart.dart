@@ -1,4 +1,4 @@
-import 'package:fake_api/models/cart_product.dart';
+
 import 'package:fake_api/models/product.dart';
 
 class Cart{
