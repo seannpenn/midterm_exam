@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
         child: 
         FutureBuilder(
             future: service.getAllProducts(),
-            builder: (_, AsyncSnapshot<List<Product>> snapshot) {
+            builder: (_, AsyncSnapshot<List<Product>?>snapshot) {
               if (!snapshot.hasData) {
                 return const CircularProgressIndicator();
               }
