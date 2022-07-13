@@ -1,5 +1,5 @@
 class Product {
-  String id;
+  int id;
   String title;
   String price;
   String category;
@@ -9,7 +9,7 @@ class Product {
   String productId;
 
   Product(
-      {this.id = '',
+      {this.id = 0,
       this.title = '',
       this.price = '',
       this.category = '',
@@ -21,7 +21,7 @@ class Product {
 
   factory Product.fromJson(Map<String, dynamic> item) {
     return Product(
-      id: item['id'].toString(),
+      id: item['id'],
       title: item['title'],
       price: item['price'].toString(),
       category: item['category'],
@@ -31,7 +31,7 @@ class Product {
   }
   factory Product.fromJsonProductCart(Map<String, dynamic> item) {
     return Product(
-      productId: item['productId'].toString(),
+      productId: item['productId'],
       quantity: item['quantity'].toString(),
     );
   }

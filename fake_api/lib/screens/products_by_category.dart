@@ -8,6 +8,7 @@ import 'product_detail.dart';
 class ProductsByCategoryScreen extends StatelessWidget {
   final String categoryName;
 final ApiService service = locator<ApiService>();
+
    ProductsByCategoryScreen({Key? key, required this.categoryName})
       : super(key: key);
 
@@ -43,7 +44,7 @@ final ApiService service = locator<ApiService>();
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (_) => ProductDetailScreen(id: products[index].id),
+                      builder: (_) => ProductDetailScreen(id: index),
                     ),
                   );
                 },

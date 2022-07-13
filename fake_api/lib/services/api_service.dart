@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:fake_api/models/cart.dart';
 import 'package:fake_api/models/cart_product.dart';
 import 'package:fake_api/models/product.dart';
@@ -34,7 +36,7 @@ class ApiService {
     return products;
   }
 
-  Future<Product> getProduct(String id) async {
+  Future<Product> getProduct(int id) async {
     final response = await http.get(Uri.parse('$baseUrl/products/$id'));
     final jsonResponse = convert.jsonDecode(response.body);
     print(jsonResponse);
@@ -88,7 +90,7 @@ class ApiService {
     } 
     return Cart.fromJson(jsonResponse);
   }
-  Future updateCart(String id, String productId,  DateTime date) async {
+  Future updateCart(String id, int productId,  DateTime date) async {
     final body = {
       'date' : date.toString(),
       'products' : [{'productId': productId, 'quantity': 1}].toString(),

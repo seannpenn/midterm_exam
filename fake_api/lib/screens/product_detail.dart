@@ -6,7 +6,7 @@ import '../models/product.dart';
 import '../services/api_service.dart';
 
 class ProductDetailScreen extends StatelessWidget {
-  String id;
+  int id;
 
   ProductDetailScreen({Key? key, required this.id}) : super(key: key);
   final ApiService service = locator<ApiService>();
